@@ -77,6 +77,35 @@
       alert('我听不懂');
       }
     }
-    
+     // 创建一个小娜的对象
+     var xiaona =new Xiaona();
+    while(true){
+        var msg = xiaona.ask();
+        // 退出判断
+    if (msg == 'q') {
+      break;
+        }
+    // 判断输入的是不是1.2.3
+    switch(msg){
+        case '1':
+        case '总和':
+        // 让小娜计算总和
+        xiaona.calculate();
+        break;
+        case '2':
+        case '时间':
+     // 让小娜获取系统当前的时间
+      xiaona.getDate();
+        break;
+        //让小娜随机输出笑话
+        case '3':
+        case '笑话':
+        xiaona.jokes();
+        break;
+       default :
+        xiaona.meng();
+        break;
+    }
+    }
 </script>
 </html>
